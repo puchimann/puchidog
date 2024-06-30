@@ -23,12 +23,12 @@
         .content-box {
             display: flex;
             flex-direction: column;
-            width: 360px;
+            width: 300px;
             text-align: center;
         }
 
         .span1, .span2{
-            font-size: 60px;
+            font-size: 40px;
             font-weight: 900;
             line-height: 1.03077097em;
             text-align: center;
@@ -50,6 +50,7 @@
             border-radius: 10px;
             box-shadow: 5px 5px 0px 0px #fff;
             border: 2px solid #eefd6f;
+            cursor: pointer;
         }
 
         .span3{
@@ -71,7 +72,8 @@
         }
 
         .button:hover {
-            background: #fff ;
+            background: #fff;
+            box-shadow: 5px 5px 0px 0px #000;
         }
 
         a {
@@ -96,6 +98,24 @@
             .container {
                 flex-direction: column;
             }
+
+            .img-box img {
+                width: 200px!important;
+            }
+        }
+
+        /* New CSS for the animation */
+        @keyframes scaleAnimation {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .scale-animation img {
+            animation: scaleAnimation 1s infinite;
         }
 
     </style>
@@ -103,7 +123,7 @@
 <body>
     <hr>
     <div class="container">
-        <div class="img-box"><img src="catbath-removebg.png" alt="" width="300px"></div>
+        <div class="img-box scale-animation"><img src="catbath-removebg.png" alt="" width="350px"></div>
         <div class="content-box">
             <span class="span1">
                 Where  memes ​Come to life
@@ -114,6 +134,7 @@
             <span class="span3">
                 WetCat ($WETCAT) today and be part of something bigger than finance – join a community that celebrates laughter, creativity, and the love of memes. Let's make the internet a happier place, one meme at a time.
             </span>
+            <span class="span3">Get WetCat, Get Meme-ing!</span>
             <div class="content-box2">
                 <a href="https://pump.fun" class="button">Buy Me</a>
                 <a href="https://t.me/wetcatsilly" class="button">Telegram</a>
@@ -121,9 +142,56 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="container">
+        <div class="img-box"><img src="catgif.gif" alt="" width="350px"></div>
+        <div class="content-box">
+            <span class="span1">Tokenomics</span>
+            <div class="content-box2">
+                <a href="https://pump.fun" class="button" style="background: crimson;color: #fff;">Total Supply
+                <br><br>1,000,000,000</a>
+                <a href="https://t.me/wetcatsilly" class="button" style="background: crimson;color: #fff;">Supply Distribution<br><br>45% - PRESALE
+                <br><br>55% - BURN</a>
+                <a href="https://x.com/wetcatsilly" class="button" style="background: crimson;color: #fff;">Unsold Tokens = Burn</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="img-box"></div>
+        <div class="content-box" style="width: 350px;">
+            <span class="span1">CA Address</span>
+            <span class="span1" style="background: #fff;border-radius: 10px;font-size: 30px;padding: 0 12px;color: red;font-weight: 900;">
+                Announced after launch
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="content-box" style="width: 350px;">
+            <span class="span1">Our Mission?</span>
+            <img src="boom.gif" alt="" width="350px" style="border-radius: 10px;box-shadow: 5px 5px 0px 0px #000;border: 2px solid #000;">
+        </div>
+    </div>
     <div class="container footer">
         @$WETCAT - The Silly Kitty, 2024.
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const span2 = document.querySelector('.span2');
+    
+    span2.addEventListener('mouseover', function() {
+        span2.textContent = "The Silly Kitty Cat";
+        span2.style.fontSize = "40px";
+        span2.style.background = "blueviolet";
+    });
+    
+    span2.addEventListener('mouseout', function() {
+        span2.textContent = "$WETCAT";
+        span2.style.fontSize = "";  // Reset to the original font size
+        span2.style.background = "";  // Reset to the original background color
+    });
+});
+    </script>
 </body> 
 </html>
